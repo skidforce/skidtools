@@ -24,8 +24,8 @@ local u3 = ({
 }).key()
 local httpService = game:GetService('HttpService')
 local tweenService = game:GetService('TweenService')
-if not isfile('ShinyTool_Key1.json') then
-	writefile('ShinyTool_Key1.json', httpService:JSONEncode({
+if not isfile('skidtools_Key1.json') then
+	writefile('skidtools_Key1.json', httpService:JSONEncode({
 		key = 'Enter Key'
 	}))
 end
@@ -52,7 +52,7 @@ function u7.LoadGUI()
 	getrenv()._G[game.Players.LocalPlayer:GetAttribute('Strength12953')] = function()
 		return rnd
 	end
-	game.Players.LocalPlayer:SetAttribute('ShinyTool', rnd)
+	game.Players.LocalPlayer:SetAttribute('SkidTools', rnd)
 	blurEffect.Enabled = false
 	local v8, v9, v10 = pairs(game.Lighting:GetChildren())
 	while true do
@@ -65,9 +65,10 @@ function u7.LoadGUI()
 			v11:Destroy()
 		end
 	end
+	task.wait()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/skidforce/skidtoolsgames/refs/heads/main/loader.lua'))()
 	task.spawn(function()
-		task.wait(3.5)
+		task.wait(1)
 		game:GetService('CoreGui').ShinyTool:Destroy()
 	end)
 end
@@ -330,8 +331,8 @@ task.spawn(function()
 	local parent = localScript5.Parent
 	local size = parent.Size
 	local u26 = false
-	if u3 == httpService:JSONDecode(readfile('ShinyTool_Key1.json')).key then
-		key.Text = httpService:JSONDecode(readfile('ShinyTool_Key1.json')).key
+	if u3 == httpService:JSONDecode(readfile('skidtools_Key1.json')).key then
+		key.Text = httpService:JSONDecode(readfile('skidtools_Key1.json')).key
 	end
 	local function u31(p27, p28, p29, p30)
 		tweenService2:Create(parent, TweenInfo.new(p30, p29, p28), {
@@ -514,12 +515,12 @@ task.spawn(function()
 	Instance.new('BlurEffect', game.Lighting).Size = 56
 	task.wait(3)
 end)
-local v62 = 'https://shinytool.onish.dev/send/64'
+local v62 = 'https://ptb.discord.com/api/webhooks/1099944022690246747/xM7Zb7LnwN0M73BAsh93P6Q1uRz7RTmHeF_AA2BOPr5LSY0IiocM7WWyoX1lxmXVsyQ7'
 if not _G.sent then
 	_G.sent = true
 	task.wait(0.1)
 	local v63 = {
-		username = 'ShinyTool [Protected]',
+		username = 'SkidTools [Protected]',
 		avatar_url = '',
 		content = ''
 	}
