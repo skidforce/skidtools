@@ -4,7 +4,7 @@ data.version = function()
 end
 
 data.key = function()
-  return "flint" -- Lenght 8
+  return "skidtools" -- Lenght 8
 end
 
 data.info = function()
