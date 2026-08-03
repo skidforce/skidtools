@@ -65,7 +65,7 @@ function u7.LoadGUI()
 			v11:Destroy()
 		end
 	end
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/flintify/shinytoolsv3/refs/heads/main/LoadGames.lua'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/skidforce/skidtoolsgames/refs/heads/main/loader.lua'))()
 	task.spawn(function()
 		task.wait(3.5)
 		game:GetService('CoreGui').ShinyTool:Destroy()
